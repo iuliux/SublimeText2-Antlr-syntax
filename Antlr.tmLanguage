@@ -43,7 +43,7 @@
 			<key>comment</key>
 			<string>Fragments</string>
 			<key>match</key>
-			<string>\b[A-Z]+\b</string>
+			<string>\b[A-Z_]+\b</string>
 			<key>name</key>
 			<string>constant.language.antlr</string>
 		</dict>
