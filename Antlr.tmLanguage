@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>name</key>
-	<string>Antlr</string>
 	<key>fileTypes</key>
 	<array>
 		<string>g</string>
@@ -11,6 +9,8 @@
 	</array>
 	<key>firstLineMatch</key>
 	<string>.*\bgrammar\b.*;</string>
+	<key>name</key>
+	<string>Antlr</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -30,12 +30,12 @@
 			<string>comment.block.antlr</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>Single quoted strings or characters</string>
 			<key>begin</key>
 			<string>'</string>
+			<key>comment</key>
+			<string>Single quoted strings or characters</string>
 			<key>end</key>
-			<string>'</string>
+			<string>[^\\]'</string>
 			<key>name</key>
 			<string>string.quoted.single.single-line.antlr</string>
 		</dict>
@@ -43,7 +43,7 @@
 			<key>comment</key>
 			<string>Fragments</string>
 			<key>match</key>
-			<string>\b[A-Z]+\b</string>
+			<string>\b[A-Z_]+\b</string>
 			<key>name</key>
 			<string>constant.language.antlr</string>
 		</dict>
@@ -56,8 +56,22 @@
 			<string>keyword.control.antlr</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.class.antlr</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Parser Rules</string>
 			<key>match</key>
-			<string>\b(grammar|returns)\b</string>
+			<string>^\s*(\w+)\s*[:]\s</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(grammar|returns|options|tokens)\b</string>
 			<key>name</key>
 			<string>keyword.command.antlr</string>
 		</dict>
