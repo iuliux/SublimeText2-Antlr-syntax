@@ -71,7 +71,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(grammar|returns|options|tokens)\b</string>
+			<string>\b(grammar|returns|options|tokens|lexer grammar)\b</string>
 			<key>name</key>
 			<string>keyword.command.antlr</string>
 		</dict>
