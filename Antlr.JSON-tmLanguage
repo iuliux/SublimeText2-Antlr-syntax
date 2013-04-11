@@ -1,0 +1,88 @@
+{
+  "fileTypes" : [
+    "g",
+    "g4"
+  ],
+  "firstLineMatch" : ".*\\bgrammar\\b.*;",
+  "uuid" : "eb5d6c6d-9170-4e02-baf3-8a62ed60b276",
+  "patterns" : [
+    {
+      "end" : "(?<=\\*\/)",
+      "begin" : "(?=\/\\*)",
+      "name" : "comment.block.antlr"
+    },
+    {
+      "end" : "(?<=\\n)",
+      "begin" : "(?=\/\/)",
+      "name" : "comment.block.antlr"
+    },
+    {
+      "end" : "[^\\\\]'|\\\\\\\\'",
+      "begin" : "'",
+      "comment" : "Single quoted strings or characters",
+      "name" : "string.quoted.single.single-line.antlr"
+    },
+     {
+      "match" : "\\b(grammar|returns|options|tokens|lexer grammar|import|fragment|parser grammar|locals|throws|catch|finally|mode)\\b",
+      "name" : "keyword.command.antlr"
+    },
+    {
+      "begin" : "^\\s*([a-z]\\w+)\\s*",
+      "end" : "([:])\\s",
+      "patterns" : [
+      	{ "include" : "$self"}
+        ],
+      "beginCaptures" : {
+        "1" : {
+          "name" : "storage.type.class.antlr"
+        }
+      },
+      "endCaptures" : {
+      	"1" : {
+      		"name" :"keyword.operator.assignment.augmented.antlr"
+      	}
+      },
+      "comment" : "Lexer Rules"
+    },
+    {
+      "match" : "\\$",
+      "comment" : "Dollar sign",
+      "name" : "keyword.control.antlr"
+    },
+    {
+      "begin" : "^\\s*([A-Z]\\w+)\\s*",
+      "end" : "([:])\\s",
+      "patterns" : [
+      	{ "include" : "$self"}
+        ],
+      "beginCaptures" : {
+        "1" : {
+          "name" : "constant.language.antlr"
+        }
+      },
+      "endCaptures" : {
+      	"1" : {
+      		"name" :"keyword.operator.assignment.augmented.antlr"
+      	}
+      },
+      "comment" : "Lexer Rules"
+    },
+   
+    {
+      "match" : "\\=|\\+\\=|-\\=|\\*\\=|\/\\=|\/\/\\=|%\\=|&\\=|\\|\\=|\\^\\=|>>\\=|<<\\=|\\*\\*\\=",
+      "name" : "keyword.operator.assignment.augmented.antlr"
+    },
+    {
+      "match" : "[|*+?]",
+      "comment" : "Regex operators",
+      "name" : "keyword.operator.antlr"
+    },
+    {
+      "match" : "^\\s*(?:@)([a-z]+)\\b",
+      "comment" : "Section definitions like @header",
+      "name" : "storage.type.function.antlr"
+    }
+  ],
+  "name" : "Antlr",
+  "scopeName" : "source.antlr"
+}
