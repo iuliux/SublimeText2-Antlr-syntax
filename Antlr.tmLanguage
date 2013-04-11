@@ -35,7 +35,7 @@
 			<key>comment</key>
 			<string>Single quoted strings or characters</string>
 			<key>end</key>
-			<string>[^\\]'|\\\\'</string>
+			<string>(?&lt;=[^\\])'|(?&lt;=[^\\])\\\\'|[\\]{4}'</string>
 			<key>name</key>
 			<string>string.quoted.single.single-line.antlr</string>
 		</dict>
@@ -65,7 +65,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.assignment.augmented.antlr</string>
+					<string>keyword.operator.antlr</string>
 				</dict>
 			</dict>
 			<key>patterns</key>
@@ -104,7 +104,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.assignment.augmented.antlr</string>
+					<string>keyword.operator.antlr</string>
 				</dict>
 			</dict>
 			<key>patterns</key>
@@ -119,7 +119,7 @@
 			<key>match</key>
 			<string>\=|\+\=|-\=|\*\=|/\=|//\=|%\=|&amp;\=|\|\=|\^\=|&gt;&gt;\=|&lt;&lt;\=|\*\*\=</string>
 			<key>name</key>
-			<string>keyword.operator.assignment.augmented.antlr</string>
+			<string>keyword.operator.antlr</string>
 		</dict>
 		<dict>
 			<key>comment</key>

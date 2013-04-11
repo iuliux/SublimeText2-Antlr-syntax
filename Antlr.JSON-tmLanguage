@@ -17,7 +17,7 @@
       "name" : "comment.block.antlr"
     },
     {
-      "end" : "[^\\\\]'|\\\\\\\\'",
+      "end" : "(?<=[^\\\\])'|(?<=[^\\\\])\\\\\\\\'|[\\\\]{4}'",
       "begin" : "'",
       "comment" : "Single quoted strings or characters",
       "name" : "string.quoted.single.single-line.antlr"
@@ -39,7 +39,7 @@
       },
       "endCaptures" : {
       	"1" : {
-      		"name" :"keyword.operator.assignment.augmented.antlr"
+      		"name" :"keyword.operator.antlr"
       	}
       },
       "comment" : "Lexer Rules"
@@ -62,7 +62,7 @@
       },
       "endCaptures" : {
       	"1" : {
-      		"name" :"keyword.operator.assignment.augmented.antlr"
+      		"name" :"keyword.operator.antlr"
       	}
       },
       "comment" : "Lexer Rules"
@@ -70,7 +70,7 @@
    
     {
       "match" : "\\=|\\+\\=|-\\=|\\*\\=|\/\\=|\/\/\\=|%\\=|&\\=|\\|\\=|\\^\\=|>>\\=|<<\\=|\\*\\*\\=",
-      "name" : "keyword.operator.assignment.augmented.antlr"
+      "name" : "keyword.operator.antlr"
     },
     {
       "match" : "[|*+?]",
