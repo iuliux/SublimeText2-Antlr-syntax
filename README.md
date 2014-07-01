@@ -1,7 +1,7 @@
 ANTLR Sublime-Text-2 syntax highlight
 ---------------
 
-Puts some colors in `.g` ANTLR files.  
+Puts some colors in `.g` and `.g4` ANTLR files.  
 Very basic coloring.
 
 ---
