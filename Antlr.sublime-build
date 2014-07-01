@@ -1,0 +1,8 @@
+{
+  "selector": "source.g4",
+  "shell":true,
+  "linux":
+  {
+    "cmd":["export CLASSPATH=\".:/usr/local/lib/antlr-4.3-complete.jar:$CLASSPATH\";java -jar /usr/local/lib/antlr-4.3-complete.jar $file;javac $file_base_name*.java"]
+  }
+}
