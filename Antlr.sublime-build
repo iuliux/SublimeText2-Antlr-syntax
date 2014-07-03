@@ -1,9 +1,10 @@
 {
   "selector": "source.g4",
   "shell":true,
+  "file_regex": ".*: (.*):([0-9]+):([0-9]+):.*$",
   "windows":
   {
-  	"cmd":["java","-cp","C:/javaLib/antlr-4.3-complete.jar;","org.antlr.v4.Tool","$file","&&","javac","-cp","C:/javaLib/antlr-4.3-complete.jar;","$file_base_name*.java"]
+    "cmd":["java","-cp","C:/javaLib/antlr-4.3-complete.jar;","org.antlr.v4.Tool","$file","&&","javac","-cp","C:/javaLib/antlr-4.3-complete.jar;","$file_base_name*.java"]
   },
   "linux":
   {
