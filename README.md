@@ -1,4 +1,4 @@
-ANTLR Sublime-Text-2 syntax highlight
+ANTLR Sublime-Text-2/3 syntax highlight
 ---------------
 
 Puts some colors in `.g` and `.g4` ANTLR files.  
