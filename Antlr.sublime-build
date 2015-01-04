@@ -2,12 +2,5 @@
   "selector": "source.antlr",
   "shell":true,
   "file_regex": ".*: (.*):([0-9]+):([0-9]+):.*$",
-  "windows":
-  {
-    "cmd":["java","-cp","C:/javaLib/antlr-4.3-complete.jar;","org.antlr.v4.Tool","$file","&&","javac","-cp","C:/javaLib/antlr-4.3-complete.jar;","$file_base_name*.java"]
-  },
-  "linux":
-  {
-    "cmd":["export CLASSPATH=\".:/usr/local/lib/antlr-4.3-complete.jar:$CLASSPATH\";java -jar /usr/local/lib/antlr-4.3-complete.jar $file;javac $file_base_name*.java"]
-  }
+  "cmd":["antlr4 $file_name;javac $file_base_name*.java"]
 }
