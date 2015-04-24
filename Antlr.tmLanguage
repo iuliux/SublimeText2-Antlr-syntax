@@ -15,11 +15,11 @@
 	<array>
 		<dict>
 			<key>begin</key>
-			<string>(?&lt;!\\)"|(?&lt;!\\)\\\\"|[\\]{4}"</string>
+			<string>(?&lt;=[^\\])"|(?&lt;=[^\\])\\\\"|[\\]{4}"</string>
 			<key>comment</key>
 			<string>Double quoted strings or characters</string>
 			<key>end</key>
-			<string>(?&lt;!\\)"|(?&lt;!\\)\\\\"|[\\]{4}"</string>
+			<string>(?&lt;=[^\\])"|(?&lt;=[^\\])\\\\"|[\\]{4}"</string>
 			<key>name</key>
 			<string>string.quoted.double.single-line.antlr</string>
 		</dict>
