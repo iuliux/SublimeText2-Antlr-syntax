@@ -15,6 +15,16 @@
 	<array>
 		<dict>
 			<key>begin</key>
+			<string>\[</string>
+			<key>comment</key>
+			<string>Charset</string>
+			<key>end</key>
+			<string>\]</string>
+			<key>name</key>
+			<string>charset.antlr</string>
+		</dict>
+		<dict>
+			<key>begin</key>
 			<string>"</string>
 			<key>comment</key>
 			<string>Double quoted strings or characters</string>
